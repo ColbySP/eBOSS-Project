@@ -7,12 +7,6 @@ import pandas as pd
 import numpy as np
 import time
 
-# select a group for Monte-Carlo error simulation and how many sims to run
-ref_dir = ...
-folder_dir = ...
-files = ...
-n_simulations = 50
-
 
 def create_nonlinear_grid(x_min, x_max):
     """
@@ -184,3 +178,13 @@ def stack_spectra(ref_dir: str, folder_dir: str, files: list[str], min_wave: flo
     simulations.index = x_axis
     simulations.index.names = ['WAVE']
     return simulations
+
+
+# set initial parameters and paths for stacking code
+ref_dir = ...
+folder_dir = ...
+files = ...
+n_simulations = 50
+
+# run the code and return a DataFrame for further analysis
+df = stack_spectra(ref_dir=ref_dir, folder_dir=folder_dir, files=files, min_wave=3600, max_wave=10400, n_simulations=1)
