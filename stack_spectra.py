@@ -187,4 +187,4 @@ files = ...
 n_simulations = 50
 
 # run the code and return a DataFrame for further analysis
-df = stack_spectra(ref_dir=ref_dir, folder_dir=folder_dir, files=files, min_wave=3600, max_wave=10400, n_simulations=1)
+df = stack_spectra(ref_dir=ref_dir, folder_dir=folder_dir, files=files, min_wave=3600, max_wave=10400, n_simulations=n_simulations)
